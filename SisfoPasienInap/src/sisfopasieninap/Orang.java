@@ -84,7 +84,6 @@ public abstract class Orang {
 
     public void setKwn(String Kwn) {
         this.Kwn = Kwn;
-    }
-     
+    }    
 }
     

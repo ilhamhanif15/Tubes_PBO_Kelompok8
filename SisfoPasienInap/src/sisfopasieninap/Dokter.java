@@ -43,7 +43,5 @@ public class Dokter extends Orang {
     public void setIdDokter(String IdDokter) {
         this.IdDokter = IdDokter;
     }
-    
-    
-    
+      
 }
