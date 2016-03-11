@@ -5,7 +5,6 @@
  */
 package sisfopasieninap;
 
-import java.util.Date;
 
 /**
  *
@@ -13,14 +12,15 @@ import java.util.Date;
  */
 public class Pasien extends Orang{
     private String idPasien;
-    private Date tanggalPendaftaran;
-    public Pasien (String Nama, Date TanggalLahir, String Alamat, long NoTelp, String Id, String JenisKelamin, String Kwn){
+    private String tanggalPendaftaran;
+    public Pasien (String Nama, String TanggalLahir, String Alamat, String NoTelp, String Id, String JenisKelamin, String Kwn, String tanggalPendaftaran){
         super(Nama,TanggalLahir,Alamat,NoTelp,Id,JenisKelamin,Kwn);
+        setTanggalPendaftaran(tanggalPendaftaran);
     }
-    public void setTanggalPendaftaran (Date tanggalPendaftaran){
+    public void setTanggalPendaftaran (String tanggalPendaftaran){
         this.tanggalPendaftaran = tanggalPendaftaran;
     }
-    public Date getTanggalPendaftaran(){
+    public String getTanggalPendaftaran(){
         return tanggalPendaftaran;
     }
     public String getIdPasien(){
