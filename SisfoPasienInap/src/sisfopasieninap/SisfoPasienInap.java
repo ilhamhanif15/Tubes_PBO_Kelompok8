@@ -51,8 +51,11 @@ public class SisfoPasienInap {
                 System.out.println("Jenis Kelamin : "+r.GetPasienInap(a).getPasien().getJenisKelamin());
                 System.out.println("Kewarganegaraan : "+r.GetPasienInap(a).getPasien().getKwn());
                 System.out.println("Tanggal Pendaftaran : "+r.GetPasienInap(a).getPasien().getTanggalPendaftaran());
-                
-                
+                for (int b=0; b<5 ;b++) {
+                    if (r.GetPasienInap(a).getDiagnosa(b) != null) {
+                        System.out.println("Diagnosa Ke-"+(b+1)+" = "+r.GetPasienInap(a).getDiagnosa(b));
+                    }
+                } 
                 System.out.println("-----------------------------------------------------");
                 System.out.println("DATA DOKTER YANG MENANGANI");
                 System.out.println("Nama : "+r.GetPasienInap(a).getDokter().getNama());
@@ -88,7 +91,11 @@ public class SisfoPasienInap {
                 System.out.println("Jenis Kelamin : "+r.GetPasienInap(a).getPasien().getJenisKelamin());
                 System.out.println("Kewarganegaraan : "+r.GetPasienInap(a).getPasien().getKwn());
                 System.out.println("Tanggal Pendaftaran : "+r.GetPasienInap(a).getPasien().getTanggalPendaftaran());
-                
+                for (int b=0; b<5 ;b++) {
+                    if (r.GetPasienInap(a).getDiagnosa(b) != null) {
+                        System.out.println("Diagnosa Ke-"+(b+1)+" = "+r.GetPasienInap(a).getDiagnosa(b));
+                    }
+                }
                 System.out.println("-----------------------------------------------------");
                 System.out.println("DATA DOKTER YANG MENANGANI");
                 System.out.println("Nama : "+r.GetPasienInap(a).getDokter().getNama());
