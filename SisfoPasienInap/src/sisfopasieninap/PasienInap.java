@@ -34,7 +34,15 @@ public class PasienInap {
         return Diagnosa[index];
     }
     public void DeleteDiagnosa(int index) {
-        
+        Diagnosa[index] = null;
+        for (int a=0;a<5;a++) {
+            if (Diagnosa[a] == null) {
+                while(a<(5-a)){
+                    Diagnosa[a] = Diagnosa[a+1];
+                    a++;
+                }
+            }
+        }
     }
     public Pasien getPasien(){
         return pasien;

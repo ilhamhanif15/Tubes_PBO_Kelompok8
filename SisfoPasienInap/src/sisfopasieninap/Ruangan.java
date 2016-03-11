@@ -41,6 +41,14 @@ public class Ruangan {
         return daftarPasien[b];
     }
     public void RemovePasienInap(int index) {
-        
+        daftarPasien[index] = null;
+        for (int a=0;a<5;a++) {
+            if (daftarPasien[a] == null) {
+                while(a<(5-a)){
+                    daftarPasien[a] = daftarPasien[a+1];
+                    a++;
+                }                
+            }
+        }
     }
 }
