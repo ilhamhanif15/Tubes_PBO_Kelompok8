@@ -12,14 +12,34 @@ package sisfopasieninap;
 public class PasienInap {
     private Pasien pasien;
     private Dokter dokter;
-    private String[] Diagnosa;
-    public void setDokter (Dokter d){
+    private String[] Diagnosa = new String[5];
+    private int i= 0;
+    public PasienInap(Pasien p, Dokter d) {
+        setPasien(p);
+        setDokter(d);
+    }
+    public void setPasien(Pasien p){
+        this.pasien = p;
+    }
+    public void setDokter(Dokter d){
+        this.dokter = d;
+    }
+    public void addDiagnosa (String diagnosa){
+        if(i<5){
+            this.Diagnosa[i]=diagnosa;
+            i++;
+	}
+    }
+    public String getDiagnosa(int index){
+        return Diagnosa[index];
+    }
+    public void DeleteDiagnosa(int index) {
         
     }
-    public void addDiagnosa (String d){
-        
+    public Pasien getPasien(){
+        return pasien;
     }
-    public String getDiagnosa(int d){
-        return Diagnosa[d];
+    public Dokter getDokter(){
+        return dokter;
     }
 }

@@ -13,14 +13,14 @@ import java.util.Date;
  */
 public abstract class Orang {
     private String Nama;
-    private Date TanggalLahir;
+    private String TanggalLahir;
     private String Alamat;
-    private long NoTelp;
+    private String NoTelp;
     private String Id;
     private String JenisKelamin;
     private String Kwn;
 
-    public Orang(String Nama, Date TanggalLahir, String Alamat, long NoTelp, String Id, String JenisKelamin, String Kwn) {
+    public Orang(String Nama, String TanggalLahir, String Alamat, String NoTelp, String Id, String JenisKelamin, String Kwn) {
         this.Nama = Nama;
         this.TanggalLahir = TanggalLahir;
         this.Alamat = Alamat;
@@ -38,11 +38,11 @@ public abstract class Orang {
         this.Nama = Nama;
     }
 
-    public Date getTanggalLahir() {
+    public String getTanggalLahir() {
         return TanggalLahir;
     }
 
-    public void setTanggalLahir(Date TanggalLahir) {
+    public void setTanggalLahir(String TanggalLahir) {
         this.TanggalLahir = TanggalLahir;
     }
 
@@ -54,11 +54,11 @@ public abstract class Orang {
         this.Alamat = Alamat;
     }
 
-    public long getNoTelp() {
+    public String getNoTelp() {
         return NoTelp;
     }
 
-    public void setNoTelp(Long NoTelp) {
+    public void setNoTelp(String NoTelp) {
         this.NoTelp = NoTelp;
     }
 
@@ -84,6 +84,5 @@ public abstract class Orang {
 
     public void setKwn(String Kwn) {
         this.Kwn = Kwn;
-    }    
+    }
 }
-    
