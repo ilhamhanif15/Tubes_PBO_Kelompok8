@@ -15,8 +15,7 @@ public class SisfoPasienInap {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Ruangan r = new Ruangan();
-        r.setKodeRuang("MELATI");
+        Ruangan r = new Ruangan("MELATI");
         Pasien p1 = new Pasien("Elvis","20-03-92","Jalan Gamelan no 25","08122344561","ELVIS","Laki-laki","USA","13-03-2010");
         Dokter d1 = new Dokter("DR.Andi","28-08-87","Jalan Guling no 7","08132134556","ANDI","Laki-laki","IDN");
         Pasien p2 = new Pasien("Scott","02-02-90","Jalan Odading no 20","08723451132","SCT","Laki-laki","AUS","02-03-2010");

@@ -13,9 +13,8 @@ public class Ruangan {
     private PasienInap[] daftarPasien = new PasienInap[5];
     private String kodeRuang;
     private int i = 0;
-    
-    public Ruangan (String kodeRuang){
-        this.kodeRuang = kodeRuang;
+    public Ruangan(String KodeRuang){
+        setKodeRuang(KodeRuang);
     }
     public void tambahPasienInap(Pasien p, Dokter d){
         if(i<5){
@@ -33,25 +32,41 @@ public class Ruangan {
         return daftarPasien[index];
     }
     public PasienInap GetPasienInap(String IdPasien){
-        boolean cek;
         int b = 0;
         for (b=0; b<5; b++) {
-            if ( GetPasienInap(b).getPasien().getId() == IdPasien) {
-                cek = true;
+            if ( IdPasien.equalsIgnoreCase(GetPasienInap(b).getPasien().getId())) {
                 break;
             }
-        cek = false;
         }
         return daftarPasien[b];
     }
-    public void RemovePasienInap(int index) {
-        daftarPasien[index] = null;
-        for (int a=0;a<5;a++) {
-            if (daftarPasien[a] == null) {
-                while(a<(5-a)){
-                    daftarPasien[a] = daftarPasien[a+1];
-                    a++;
-                }                
+    public void RemovePasienInap(int a) {
+        daftarPasien[a] = null;
+            while(a<(5-a)){
+               daftarPasien[a] = daftarPasien[a+1];
+               a++;
+            }
+            if((5-a)<a && a!=4) {
+               if(daftarPasien[a+1] != null ) {
+               daftarPasien[a] = daftarPasien[a+1];
+               daftarPasien[a+1] = null;
+               a++;
+               } else {
+               daftarPasien[a] = null;
+               a++;
+               }  
+            } else {
+                daftarPasien[a] = null; 
+            }
+        i--;    
+    }
+    
+    public void RemovePasienInap(String IdPasien) {
+        int a = 0;
+        for (a=0; a<5; a++) {
+            if (IdPasien.equalsIgnoreCase(GetPasienInap(IdPasien).getPasien().getId())) {
+                RemovePasienInap(a);
+                break;
             }
         }
     }

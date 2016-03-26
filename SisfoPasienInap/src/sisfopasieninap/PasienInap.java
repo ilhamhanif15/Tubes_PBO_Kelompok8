@@ -33,16 +33,25 @@ public class PasienInap {
     public String getDiagnosa(int index){
         return Diagnosa[index];
     }
-    public void DeleteDiagnosa(int index) {
-        Diagnosa[index] = null;
-        for (int a=0;a<5;a++) {
-            if (Diagnosa[a] == null) {
-                while(a<(5-a)){
-                    Diagnosa[a] = Diagnosa[a+1];
-                    a++;
-                }
+    public void DeleteDiagnosa(int a) {
+        Diagnosa[a] = null;
+            while(a<(5-a)){
+               Diagnosa[a] = Diagnosa[a+1];
+               a++;
             }
-        }
+            if((5-a)<a && a!=4) {
+               if(Diagnosa[a+1] != null ) {
+               Diagnosa[a] = Diagnosa[a+1];
+               Diagnosa[a+1] = null;
+               a++;
+               } else {
+               Diagnosa[a] = null;
+               a++;
+               }  
+            } else {
+                Diagnosa[a] = null; 
+            }
+        i--;
     }
     public Pasien getPasien(){
         return pasien;
