@@ -13,9 +13,8 @@ public class Ruangan {
     private PasienInap[] daftarPasien = new PasienInap[5];
     private String kodeRuang;
     private int i = 0;
-    
-    public Ruangan (String kodeRuang){
-        this.kodeRuang = kodeRuang;
+    public Ruangan(String KodeRuang){
+        setKodeRuang(KodeRuang);
     }
     public void tambahPasienInap(Pasien p, Dokter d){
         if(i<5){
@@ -33,14 +32,11 @@ public class Ruangan {
         return daftarPasien[index];
     }
     public PasienInap GetPasienInap(String IdPasien){
-        boolean cek;
         int b = 0;
         for (b=0; b<5; b++) {
-            if ( GetPasienInap(b).getPasien().getId() == IdPasien) {
-                cek = true;
+            if ( IdPasien.equalsIgnoreCase(GetPasienInap(b).getPasien().getId())) {
                 break;
             }
-        cek = false;
         }
         return daftarPasien[b];
     }
@@ -52,6 +48,24 @@ public class Ruangan {
                     daftarPasien[a] = daftarPasien[a+1];
                     a++;
                 }                
+            }
+        }
+    }
+    
+    public void RemovePasienInap(String IdPasien) {
+        int a = 0;
+        for (a=0; a<5; a++) {
+            if (IdPasien.equalsIgnoreCase(daftarPasien[a].getPasien().getId())) {
+                break;
+            }
+        }
+        daftarPasien[a] = null;
+        for (int b=0;b<5;b++) {
+            if (daftarPasien[b] == null) {
+                while(b<(5-b)){
+                    daftarPasien[b] = daftarPasien[b+1];
+                    b++;
+                }
             }
         }
     }
