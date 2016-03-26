@@ -317,13 +317,7 @@ public class Aplikasi {
                 Dokter d = new Dokter(nama,ttl,almt,telp,id,jk,kwn);
                 d.setJenisDokter(jd);
                 d.setKeahlian(kd);
-                try {
-                    addDokter(d);
-                }
-                catch (ArrayIndexOutOfBoundsException e){
-                    System.out.println("Dokter Penuh");
-                    Menu2();
-                }
+                addDokter(d);
                 ulang = 1;
                 break;
             case 2:
@@ -350,7 +344,7 @@ public class Aplikasi {
                 break;
             case 4:
                 for (int a=0 ; a<5; a++) {
-                    if (getPasien(a) == null) {
+                    if (getDokter(a) == null) {
                     System.out.println((a+1)+". Belum Ada Dokter Terdaftar");
                     }
                     else {
