@@ -13,6 +13,10 @@ public class Ruangan {
     private PasienInap[] daftarPasien = new PasienInap[5];
     private String kodeRuang;
     private int i = 0;
+    
+    public Ruangan (String kodeRuang){
+        this.kodeRuang = kodeRuang;
+    }
     public void tambahPasienInap(Pasien p, Dokter d){
         if(i<5){
             daftarPasien[i]=new PasienInap(p,d);
