@@ -56,6 +56,10 @@ public class controllerHapusPasien implements ActionListener {
                     JOptionPane.showMessageDialog(null, "Error");
             }
         }
+        else if(x.equals(hp.getBtnKembali())) {
+            ControllerMenuPasien mp =new ControllerMenuPasien(mod);
+            hp.dispose();
+        }
     }
     
     

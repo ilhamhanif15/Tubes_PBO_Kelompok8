@@ -57,6 +57,10 @@ public class ControllerHapusRuangan implements ActionListener {
                   JOptionPane.showMessageDialog(null, "Error");   
                 }
              }
+        else if(x.equals(hr.getKembali())) {
+            ControllerMenuInap mi = new ControllerMenuInap(model);
+            hr.dispose();
+        }
     }
     
 }

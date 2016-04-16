@@ -39,7 +39,11 @@ public class ControllerTambahRuangan implements ActionListener {
             model.addRuangan(r);
             JOptionPane.showMessageDialog(null, "Berhasil Menambahkan");
             
-    }
+        }
+        else if(x.equals(tr.getCancel())){
+            ControllerMenuInap mi = new ControllerMenuInap(model);
+            tr.dispose();
+        }
 }
 
 }

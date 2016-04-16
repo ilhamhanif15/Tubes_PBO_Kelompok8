@@ -40,6 +40,9 @@ public class ControllerCariRuangan implements ActionListener {
             }
             cr.getTampil().setText("Nama Ruangan : " +model.getRuangan(cari).View());
         }
+        else if (x.equals(cr.getKembali())){
+            ControllerMenuInap mi = new ControllerMenuInap(model);
+        }
     }
     
 }

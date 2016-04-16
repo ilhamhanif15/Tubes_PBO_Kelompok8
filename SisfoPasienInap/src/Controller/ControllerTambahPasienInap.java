@@ -165,7 +165,7 @@ public class ControllerTambahPasienInap implements ActionListener {
             }
     
         }else if(x.equals(tpi.getBtnBack())){
-            ControllerCariPasienInap cpi = new ControllerCariPasienInap(model);
+            ControllerMenuInap mi = new ControllerMenuInap(model);
             tpi.dispose();
         }
     }

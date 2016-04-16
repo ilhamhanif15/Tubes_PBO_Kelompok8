@@ -39,7 +39,7 @@ public class controllerCariPasien implements ActionListener{
             }
             cp.getViewdata().setText(mod.getPasien(cari).View());
         }else if(x.equals(cp.getBackbtn())){
-            controllerHapusPasien hp = new controllerHapusPasien(mod);
+            ControllerMenuPasien mp = new ControllerMenuPasien(mod);
             cp.dispose();
         }
     }

@@ -52,7 +52,7 @@ public class controllerTambahPasien implements ActionListener{
                 JOptionPane.showMessageDialog(null, "Gagal Menambahkan");
             }
         } else if (x.equals(tp.getCancelbtn())) {
-            controllerCariPasien cp = new controllerCariPasien(model);
+            ControllerMenuPasien mp = new ControllerMenuPasien(model);
             tp.dispose();
         }
         

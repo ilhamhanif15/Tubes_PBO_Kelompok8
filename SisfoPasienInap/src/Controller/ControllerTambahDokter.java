@@ -49,6 +49,10 @@ public class ControllerTambahDokter implements ActionListener{
             model.addDokter(d);
             JOptionPane.showMessageDialog(null, "Berhasil Menambahkan");
             
-    }
+        }
+        else if(x.equals(td.getCnlbtn())) {
+            ControllerMenuDokter md = new ControllerMenuDokter(model);
+            td.dispose();
+        }
 }
 }

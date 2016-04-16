@@ -39,6 +39,10 @@ public class ControllerCariDokter implements ActionListener {
             }
             cd.getjTampil().setText("Nama : " +model.getDokter(cari).View());
         }
+        else if (x.equals(cd.getKembali())){
+            ControllerMenuDokter md = new ControllerMenuDokter(model);
+            cd.dispose();
+        }
     }
     
 }

@@ -48,5 +48,9 @@ public class ControllerCariPasienInap implements ActionListener{
                 JOptionPane.showMessageDialog(null, "ID Pasien/Kode Ruang TIdak ditemukan");
             }
         }
+        else if(x.equals(cpi.getBtnkembali())){
+            ControllerMenuInap mi = new ControllerMenuInap(mod);
+            cpi.dispose();
+        }
     }        
 }

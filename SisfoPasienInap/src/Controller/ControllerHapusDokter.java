@@ -56,6 +56,10 @@ public class ControllerHapusDokter implements ActionListener {
                   JOptionPane.showMessageDialog(null, "Error");   
                 }
              }
+        else if(x.equals(hp.getKembali())) {
+            ControllerMenuDokter md = new ControllerMenuDokter(model);
+            hp.dispose();
+        }
     }
      
      
