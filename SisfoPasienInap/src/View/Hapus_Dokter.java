@@ -45,8 +45,6 @@ public class Hapus_Dokter extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel2.setText("Masukkan Id Dokter");
 
-        id.setText("jTextField1");
-
         cari.setText("Cari");
 
         Tampil.setColumns(20);

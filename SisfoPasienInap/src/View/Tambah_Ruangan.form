@@ -110,14 +110,8 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="nama">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="jTextField3"/>
-      </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="kode">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="jTextField4"/>
-      </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="tambah">
       <Properties>

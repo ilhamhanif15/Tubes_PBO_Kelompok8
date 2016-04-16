@@ -73,28 +73,11 @@ public class Tambah_Dokter extends javax.swing.JFrame {
 
         jLabel10.setText("Tambahkan Data Dokter");
 
-        Nama.setText("jTextField1");
         Nama.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 NamaActionPerformed(evt);
             }
         });
-
-        TTL.setText("jTextField2");
-
-        Almt.setText("jTextField3");
-
-        telp.setText("jTextField4");
-
-        Id.setText("jTextField5");
-
-        jk.setText("jTextField6");
-
-        kwn.setText("jTextField7");
-
-        jd.setText("jTextField8");
-
-        ka.setText("jTextField9");
 
         okbtn.setText("OK");
 

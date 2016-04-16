@@ -15,8 +15,10 @@ public class Dokter extends Orang {
     private String Keahlian;
     private String IdDokter;
     
-    public Dokter (String Nama, String TanggalLahir, String Alamat, String NoTelp, String Id, String JenisKelamin, String Kwn){
+    public Dokter (String Nama, String TanggalLahir, String Alamat, String NoTelp, String Id, String JenisKelamin, String Kwn, String JenisDokter, String Keahlian){
         super(Nama,TanggalLahir,Alamat,NoTelp,Id,JenisKelamin,Kwn);
+        this.JenisDokter = JenisDokter;
+        this.Keahlian = Keahlian;
     }
 
     public String getJenisDokter() {

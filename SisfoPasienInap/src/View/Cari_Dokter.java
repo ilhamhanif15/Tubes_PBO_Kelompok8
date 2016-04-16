@@ -43,8 +43,6 @@ public class Cari_Dokter extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel2.setText("Masukkan Id Dokter");
 
-        id.setText("jTextField1");
-
         cari.setText("Cari");
         cari.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

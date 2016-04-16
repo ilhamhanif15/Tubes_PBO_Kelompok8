@@ -48,10 +48,6 @@ public class Tambah_Ruangan extends javax.swing.JFrame {
 
         jLabel5.setText("Kode Ruangan");
 
-        nama.setText("jTextField3");
-
-        kode.setText("jTextField4");
-
         tambah.setText("Tambah");
 
         cancel.setText("Cancel");

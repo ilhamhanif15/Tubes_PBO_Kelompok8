@@ -70,6 +70,6 @@ public class Ruangan {
     
     public String View(){
         return "Nama Ruangan : "+nama
-                +"Kode Ruangan : "+kodeRuang;
+                +"\nKode Ruangan : "+kodeRuang;
     }
 }

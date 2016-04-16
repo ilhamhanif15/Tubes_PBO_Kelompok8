@@ -42,6 +42,7 @@ public class ControllerCariRuangan implements ActionListener {
         }
         else if (x.equals(cr.getKembali())){
             ControllerMenuInap mi = new ControllerMenuInap(model);
+            cr.dispose();
         }
     }
     
