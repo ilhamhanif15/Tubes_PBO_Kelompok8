@@ -17,14 +17,14 @@ public class SisfoPasienInap {
     public static void main(String[] args) {
         Ruangan r = new Ruangan("MELATI");
         Pasien p1 = new Pasien("Elvis","20-03-92","Jalan Gamelan no 25","08122344561","ELVIS","Laki-laki","USA","13-03-2010");
-        Dokter d1 = new Dokter("DR.Andi","28-08-87","Jalan Guling no 7","08132134556","ANDI","Laki-laki","IDN");
-        Pasien p2 = new Pasien("Scott","02-02-90","Jalan Odading no 20","08723451132","SCT","Laki-laki","AUS","02-03-2010");
-        Dokter d2 = new Dokter("DR.Raisya","09-10-89","Jalan Piano no 22","08123454474","RYS","Perempuan","IDN");
-        Pasien p3 = new Pasien("Sari","10-02-96","Jalan Kenangan no 1","08982733114","SR","Perempuan","IDN","02-08-2010");
-        Dokter d3 = new Dokter("DR.Cokki","09-09-89","Jalan Batagor no 5","08321349982","CKK","Laki-laki","IDN");
-        r.tambahPasienInap(p1,d1);
-        r.tambahPasienInap(p2,d2);
-        r.tambahPasienInap(p3,d3);
+//        Dokter d1 = new Dokter("DR.Andi","28-08-87","Jalan Guling no 7","08132134556","ANDI","Laki-laki","IDN");
+//        Pasien p2 = new Pasien("Scott","02-02-90","Jalan Odading no 20","08723451132","SCT","Laki-laki","AUS","02-03-2010");
+//        Dokter d2 = new Dokter("DR.Raisya","09-10-89","Jalan Piano no 22","08123454474","RYS","Perempuan","IDN");
+//        Pasien p3 = new Pasien("Sari","10-02-96","Jalan Kenangan no 1","08982733114","SR","Perempuan","IDN","02-08-2010");
+//        Dokter d3 = new Dokter("DR.Cokki","09-09-89","Jalan Batagor no 5","08321349982","CKK","Laki-laki","IDN");
+//        r.tambahPasienInap(p1,d1);
+//        r.tambahPasienInap(p2,d2);
+//        r.tambahPasienInap(p3,d3);
         r.GetPasienInap(0).addDiagnosa("Pecah Kepribadian"); //getPasienInap Menggunakan index
         r.GetPasienInap("ELVIS").addDiagnosa("Bisul di pantat");  //getPasienInap Menggunakan String IdPasien
         r.GetPasienInap(2).addDiagnosa("Susah Move On");  

@@ -314,10 +314,10 @@ public class Aplikasi {
                 String jd = inputscan2.nextLine();
                 System.out.println("Keahlian Dokter : ");
                 String kd = inputscan2.nextLine();
-                Dokter d = new Dokter(nama,ttl,almt,telp,id,jk,kwn);
-                d.setJenisDokter(jd);
-                d.setKeahlian(kd);
-                addDokter(d);
+//                Dokter d = new Dokter(nama,ttl,almt,telp,id,jk,kwn);
+//                d.setJenisDokter(jd);
+//                d.setKeahlian(kd);
+//                addDokter(d);
                 ulang = 1;
                 break;
             case 2:
