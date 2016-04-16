@@ -43,4 +43,15 @@ public class Dokter extends Orang {
         this.IdDokter = IdDokter;
     }
       
+    public String View() {
+        return "Nama = "+super.getNama()+
+                "\nTanggal Lahir   = "+super.getTanggalLahir()+
+                "\nAlamat          = "+super.getAlamat()+
+                "\nNo. Telpon      = "+super.getNoTelp()+
+                "\nId Dokter       = "+super.getId()+
+                "\nJenis Kelamin   = "+super.getJenisKelamin()+
+                "\nKewarganegaraan = "+super.getKwn()+
+                "\nJenis Dokter    = "+JenisDokter +
+                "\nKeahlian        = "+Keahlian;
+    }
 }
