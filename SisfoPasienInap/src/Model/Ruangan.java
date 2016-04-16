@@ -9,7 +9,9 @@ package Model;
  *
  * @author A45LB8.1
  */
+import static Model.PasienInap.Diagnosa;
 import java.util.*;
+
 public class Ruangan {
     //private PasienInap[] daftarPasien = new PasienInap[5];
     public static List<PasienInap> daftarPasienInap = new ArrayList();
@@ -72,4 +74,5 @@ public class Ruangan {
         return "Nama Ruangan : " +nama +
                "Kode Ruangan : "+kodeRuang;
     }
+    
 }
