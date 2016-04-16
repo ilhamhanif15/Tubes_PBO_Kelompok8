@@ -5,7 +5,7 @@
  */
 package Driver;
 
-import Controller.controllerTambahPasienView;
+import Controller.controllerTambahPasien;
 import Model.model;
 
 /**
@@ -19,7 +19,7 @@ public class driver {
      */
     public static void main(String[] args) {
         model m = new model();
-        controllerTambahPasienView c = new controllerTambahPasienView(m);
+        controllerTambahPasien c = new controllerTambahPasien(m);
     }
     
 }

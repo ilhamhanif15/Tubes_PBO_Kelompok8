@@ -20,11 +20,11 @@ import View.Tambah_Pasien;
  *
  * @author Asus Pc
  */
-public class controllerTambahPasienView implements ActionListener{
+public class controllerTambahPasien implements ActionListener{
     Tambah_Pasien tp;
     model model;
 
-    public controllerTambahPasienView(model model) {
+    public controllerTambahPasien(model model) {
         tp = new Tambah_Pasien();
         tp.setVisible(true);
         this.model = model;
@@ -48,7 +48,7 @@ public class controllerTambahPasienView implements ActionListener{
             try {
                 model.addPasien(p);
             } catch (IOException ex) {
-                Logger.getLogger(controllerTambahPasienView.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(controllerTambahPasien.class.getName()).log(Level.SEVERE, null, ex);
             }
             tp.getTxtarea().setText(model.getPasien(model.daftarPasien.size()-1).toString());
         } else if (x.equals(tp.getCancelbtn())) {
