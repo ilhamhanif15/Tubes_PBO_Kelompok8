@@ -16,7 +16,7 @@ public class Ruangan {
     private String kodeRuang;
     private String nama;
     private int i = 0;
-    public Ruangan(String KodeRuang, String nama){
+    public Ruangan(String nama, String KodeRuang){
         setKodeRuang(KodeRuang);
         this.nama = nama;
     }
@@ -66,5 +66,10 @@ public class Ruangan {
             }    
         }
         daftarPasienInap.remove(a);
+    }
+    
+    public String View() {
+        return "Nama Ruangan : " +nama +
+               "Kode Ruangan : "+kodeRuang;
     }
 }
