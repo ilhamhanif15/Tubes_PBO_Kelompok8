@@ -9,7 +9,7 @@ package Model;
  *
  * @author A45LB8.1
  */
-
+import sisfopasieninap.*;
 import java.util.*;
 
 public class PasienInap {
@@ -43,5 +43,4 @@ public class PasienInap {
     public Dokter getDokter(){
         return dokter;
     }
-    
 }

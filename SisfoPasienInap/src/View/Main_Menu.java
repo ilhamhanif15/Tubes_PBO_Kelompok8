@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package back;
+package View;
 
 import javax.swing.JButton;
 
@@ -45,11 +45,6 @@ public class Main_Menu extends javax.swing.JFrame {
 
         btndokter.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         btndokter.setText("Dokter");
-        btndokter.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btndokterActionPerformed(evt);
-            }
-        });
 
         btnkeluar.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         btnkeluar.setText("Keluar");
@@ -94,10 +89,6 @@ public class Main_Menu extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void btndokterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btndokterActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btndokterActionPerformed
 
     /**
      * @param args the command line arguments

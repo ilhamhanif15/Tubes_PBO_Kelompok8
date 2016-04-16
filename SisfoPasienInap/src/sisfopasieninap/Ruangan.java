@@ -61,12 +61,22 @@ public class Ruangan {
         i--;    
     }
     
+
+    
     public void RemovePasienInap(String IdPasien) {
         int a = 0;
         for (a=0; a<5; a++) {
-            if (IdPasien.equalsIgnoreCase(GetPasienInap(IdPasien).getPasien().getId())) {
-                RemovePasienInap(a);
+            if (IdPasien.equalsIgnoreCase(daftarPasien[a].getPasien().getId())) {
                 break;
+            }
+        }
+        daftarPasien[a] = null;
+        for (int b=0;b<5;b++) {
+            if (daftarPasien[b] == null) {
+                while(b<(5-b)){
+                    daftarPasien[b] = daftarPasien[b+1];
+                    b++;
+                }
             }
         }
     }

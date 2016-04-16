@@ -49,9 +49,8 @@ public class controllerTambahPasien implements ActionListener{
                 model.addPasien(p);
                 JOptionPane.showMessageDialog(null, "Berhasil Menambahkan");
             } catch (IOException ex) {
-                Logger.getLogger(controllerTambahPasien.class.getName()).log(Level.SEVERE, null, ex);
+                JOptionPane.showMessageDialog(null, "Gagal Menambahkan");
             }
-            tp.getTxtarea().setText(model.getPasien(model.daftarPasien.size()-1).toString());
         } else if (x.equals(tp.getCancelbtn())) {
             controllerCariPasien cp = new controllerCariPasien(model);
             tp.dispose();

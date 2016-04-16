@@ -9,26 +9,24 @@ package Model;
  *
  * @author A45LB8.1
  */
-import static Model.PasienInap.Diagnosa;
+import sisfopasieninap.*;
 import java.util.*;
-
 public class Ruangan {
     //private PasienInap[] daftarPasien = new PasienInap[5];
-    public static List<PasienInap> daftarPasienInap = new ArrayList();
+    public static List<PasienInap> daftarPasien = new ArrayList();
     private String kodeRuang;
     private String nama;
     private int i = 0;
-    public Ruangan(String nama, String KodeRuang){
+
+    public String getNama() {
+        return nama;
+    }
+    public Ruangan(String KodeRuang, String nama){
         setKodeRuang(KodeRuang);
         this.nama = nama;
     }
-    
-    public String getNama(){
-        return nama;
-    }
-    
     public void tambahPasienInap(Pasien p, Dokter d){
-        daftarPasienInap.add(new PasienInap(p,d));
+        daftarPasien.add(new PasienInap(p,d));
     }
     
     public void setKodeRuang(String kodeRuang){
@@ -40,39 +38,38 @@ public class Ruangan {
     }
     
     public PasienInap GetPasienInap(int index) {
-        return daftarPasienInap.get(index);
+        return daftarPasien.get(index);
     }
     
     public PasienInap GetPasienInap(String IdPasien){
         int i=0;
-        for (Object obj : daftarPasienInap) {
-            if (IdPasien.equalsIgnoreCase(daftarPasienInap.get(i).getPasien().getId())) {
+        for (Object obj : daftarPasien) {
+            if (IdPasien.equalsIgnoreCase(daftarPasien.get(i).getPasien().getId())) {
                 break;
             } else {
                 i++;
             }    
         }
-        return daftarPasienInap.get(i);
+        return daftarPasien.get(i);
     }
     public void RemovePasienInap(int a) {
-        daftarPasienInap.remove(a);
+        daftarPasien.remove(a);
     }
     
     public void RemovePasienInap(String IdPasien) {
         int a=0;
-        for (Object obj : daftarPasienInap) {
-            if (IdPasien.equalsIgnoreCase(daftarPasienInap.get(a).getPasien().getId())) {
+        for (Object obj : daftarPasien) {
+            if (IdPasien.equalsIgnoreCase(daftarPasien.get(a).getPasien().getId())) {
                 break;
             } else {
                 a++;
             }    
         }
-        daftarPasienInap.remove(a);
+        daftarPasien.remove(a);
     }
     
-    public String View() {
-        return "Nama Ruangan : " +nama +
-               "Kode Ruangan : "+kodeRuang;
+    public String View(){
+        return "Nama Ruangan : "+nama
+                +"Kode Ruangan : "+kodeRuang;
     }
-    
 }

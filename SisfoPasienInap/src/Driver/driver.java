@@ -19,7 +19,7 @@ public class driver {
      */
     public static void main(String[] args) {
         model m = new model();
-        ControllerTambahPasienInap c = new ControllerTambahPasienInap(m);
+        ControllerMainMenu mm = new ControllerMainMenu(m);
     }
     
 }
