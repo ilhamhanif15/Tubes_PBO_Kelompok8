@@ -121,4 +121,8 @@ public class model {
         }
         daftarRuangan.remove(a); 
     }
+
+    public void addDokter(sisfopasieninap.Dokter d) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }

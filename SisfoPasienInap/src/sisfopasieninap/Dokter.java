@@ -14,8 +14,10 @@ public class Dokter extends Orang {
     private String Keahlian;
     private String IdDokter;
     
-    public Dokter (String Nama, String TanggalLahir, String Alamat, String NoTelp, String Id, String JenisKelamin, String Kwn){
+    public Dokter (String Nama, String TanggalLahir, String Alamat, String NoTelp, String Id, String JenisKelamin, String Kwn,String JenisDokter, String Keahlian){
         super(Nama,TanggalLahir,Alamat,NoTelp,Id,JenisKelamin,Kwn);
+        this.JenisDokter = JenisDokter;
+        this.Keahlian = Keahlian;
     }
 
     public String getJenisDokter() {
@@ -40,6 +42,18 @@ public class Dokter extends Orang {
 
     public void setIdDokter(String IdDokter) {
         this.IdDokter = IdDokter;
+    }
+    
+    public String View() {
+        return "Nama = "+super.getNama()+
+                "Tanggal Lahir = "+super.getTanggalLahir()+
+                "Alamat = "+super.getAlamat()+
+                "No. Telpon = "+super.getNoTelp()+
+                "Id Dokter = "+super.getId()+
+                "Jenis Kelamin = "+super.getJenisKelamin()+
+                "Kewarganegaraan = "+super.getKwn()+
+                "Jenis Dokter = "+JenisDokter +
+                "Keahlian = "+Keahlian;
     }
       
 }
