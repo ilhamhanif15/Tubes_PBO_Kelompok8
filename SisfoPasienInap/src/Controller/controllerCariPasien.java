@@ -5,28 +5,40 @@
  */
 package Controller;
 
+import Model.model;
+import View.Cari_Pasien;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.JOptionPane;
 
 /**
  *
  * @author Asus Pc
  */
 public class controllerCariPasien implements ActionListener{
-    Cari_Pasien tp;
-    model model;
+    Cari_Pasien cp;
+    model mod;
 
-    public controllerTambahPasien(model model) {
-        tp = new Tambah_Pasien();
-        tp.setVisible(true);
-        this.model = model;
-        tp.getOK().addActionListener(this);
-        tp.getCancelbtn().addActionListener(this);
+    public controllerCariPasien(model mod) {
+        cp = new Cari_Pasien();
+        cp.setVisible(true);
+        this.mod = mod;
+        cp.getCaribtn().addActionListener(this);
+        cp.getBackbtn().addActionListener(this);
     }
     
     @Override
     public void actionPerformed(ActionEvent ae) {
-        throw new UnsupportedOperationException("Not supported yet.");
+        Object x = ae.getSource();
+        if (x.equals(cp.getCaribtn())) {
+            String cari = cp.getTxtcari().getText();
+            try {
+                mod.getPasien(cari);
+            } catch (Exception e) {
+                JOptionPane.showMessageDialog(null, "Pasien TIdak Ditemukan");
+            }
+            cp.getViewdata().setText(mod.getPasien(cari).View());
+        }
     }
     
 }

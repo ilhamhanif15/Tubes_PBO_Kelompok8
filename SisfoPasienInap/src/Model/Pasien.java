@@ -34,6 +34,14 @@ public class Pasien extends Orang{
         return "Pasien{" + "idPasien=" + super.getId() + ", tanggalPendaftaran=" + tanggalPendaftaran + '}';
     }
     
-    
+    public String View(){
+        return  "Nama = "+super.getNama()+
+                "\nTanggal Lahir = "+super.getTanggalLahir()+
+                "\nAlamat = "+super.getAlamat()+
+                "\nNo Telepon = "+super.getNoTelp()+
+                "\nID Pasien = "+super.getId()+
+                "\nJenis Kelamin = "+super.getJenisKelamin()+
+                "\nTanggal Pendaftaran = "+tanggalPendaftaran;
+    }
   
 }

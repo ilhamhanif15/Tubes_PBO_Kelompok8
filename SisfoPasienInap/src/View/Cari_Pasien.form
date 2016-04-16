@@ -38,7 +38,7 @@
                               <Group type="102" alignment="0" attributes="0">
                                   <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Component id="idcari" min="-2" pref="261" max="-2" attributes="0"/>
+                                  <Component id="txtcari" min="-2" pref="261" max="-2" attributes="0"/>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                   <Component id="caribtn" min="-2" max="-2" attributes="0"/>
                               </Group>
@@ -58,7 +58,7 @@
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="idcari" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtcari" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="caribtn" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
@@ -87,7 +87,7 @@
         <Property name="text" type="java.lang.String" value="Masukkan ID Pasien"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="idcari">
+    <Component class="javax.swing.JTextField" name="txtcari">
     </Component>
     <Container class="javax.swing.JScrollPane" name="jScrollPane1">
       <AuxValues>

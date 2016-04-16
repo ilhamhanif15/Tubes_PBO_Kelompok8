@@ -33,7 +33,7 @@ public class Cari_Pasien extends javax.swing.JFrame {
 
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        idcari = new javax.swing.JTextField();
+        txtcari = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
         viewdata = new javax.swing.JTextArea();
         caribtn = new javax.swing.JButton();
@@ -73,7 +73,7 @@ public class Cari_Pasien extends javax.swing.JFrame {
                                 .addGroup(layout.createSequentialGroup()
                                     .addComponent(jLabel2)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                    .addComponent(idcari, javax.swing.GroupLayout.PREFERRED_SIZE, 261, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(txtcari, javax.swing.GroupLayout.PREFERRED_SIZE, 261, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                     .addComponent(caribtn))))))
                 .addContainerGap(24, Short.MAX_VALUE))
@@ -86,7 +86,7 @@ public class Cari_Pasien extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
-                    .addComponent(idcari, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtcari, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(caribtn))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 323, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -106,10 +106,10 @@ public class Cari_Pasien extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton backbtn;
     private javax.swing.JButton caribtn;
-    private javax.swing.JTextField idcari;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextField txtcari;
     private javax.swing.JTextArea viewdata;
     // End of variables declaration//GEN-END:variables
 
@@ -117,8 +117,8 @@ public class Cari_Pasien extends javax.swing.JFrame {
         return caribtn;
     }
 
-    public JTextField getIdcari() {
-        return idcari;
+    public JTextField getTxtcari() {
+        return txtcari;
     }
 
     public JTextArea getViewdata() {
