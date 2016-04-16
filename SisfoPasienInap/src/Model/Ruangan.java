@@ -5,71 +5,66 @@
  */
 package Model;
 
-import sisfopasieninap.*;
-
 /**
  *
  * @author A45LB8.1
  */
+import java.util.*;
 public class Ruangan {
-    private PasienInap[] daftarPasien = new PasienInap[5];
+    //private PasienInap[] daftarPasien = new PasienInap[5];
+    public static List<PasienInap> daftarPasienInap = new ArrayList();
     private String kodeRuang;
+    private String nama;
     private int i = 0;
-    public Ruangan(String KodeRuang){
+    public Ruangan(String KodeRuang, String nama){
         setKodeRuang(KodeRuang);
+        this.nama = nama;
     }
+    
+    public String getNama(){
+        return nama;
+    }
+    
     public void tambahPasienInap(Pasien p, Dokter d){
-        if(i<5){
-            daftarPasien[i]=new PasienInap(p,d);
-            i++;
-	}
+        daftarPasienInap.add(new PasienInap(p,d));
     }
+    
     public void setKodeRuang(String kodeRuang){
         this.kodeRuang = kodeRuang;
     }
+    
     public String getKodeRuang(){
         return kodeRuang;
     }
+    
     public PasienInap GetPasienInap(int index) {
-        return daftarPasien[index];
+        return daftarPasienInap.get(index);
     }
+    
     public PasienInap GetPasienInap(String IdPasien){
-        int b = 0;
-        for (b=0; b<5; b++) {
-            if ( IdPasien.equalsIgnoreCase(GetPasienInap(b).getPasien().getId())) {
+        int i=0;
+        for (Object obj : daftarPasienInap) {
+            if (IdPasien.equalsIgnoreCase(daftarPasienInap.get(i).getPasien().getId())) {
                 break;
-            }
+            } else {
+                i++;
+            }    
         }
-        return daftarPasien[b];
+        return daftarPasienInap.get(i);
     }
     public void RemovePasienInap(int a) {
-        daftarPasien[a] = null;
-            while(a<(5-a)){
-               daftarPasien[a] = daftarPasien[a+1];
-               a++;
-            }
-            if((5-a)<a && a!=4) {
-               if(daftarPasien[a+1] != null ) {
-               daftarPasien[a] = daftarPasien[a+1];
-               daftarPasien[a+1] = null;
-               a++;
-               } else {
-               daftarPasien[a] = null;
-               a++;
-               }  
-            } else {
-                daftarPasien[a] = null; 
-            }
-        i--;    
+        daftarPasienInap.remove(a);
     }
     
     public void RemovePasienInap(String IdPasien) {
-        int a = 0;
-        for (a=0; a<5; a++) {
-            if (IdPasien.equalsIgnoreCase(GetPasienInap(IdPasien).getPasien().getId())) {
-                RemovePasienInap(a);
+        int a=0;
+        for (Object obj : daftarPasienInap) {
+            if (IdPasien.equalsIgnoreCase(daftarPasienInap.get(a).getPasien().getId())) {
                 break;
-            }
+            } else {
+                a++;
+            }    
         }
+        daftarPasienInap.remove(a);
     }
 }

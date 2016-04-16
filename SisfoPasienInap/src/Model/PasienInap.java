@@ -5,16 +5,18 @@
  */
 package Model;
 
-import sisfopasieninap.*;
-
-/**
+/** 
  *
  * @author A45LB8.1
  */
+
+import java.util.*;
+
 public class PasienInap {
     private Pasien pasien;
     private Dokter dokter;
-    private String[] Diagnosa = new String[5];
+    //private String[] Diagnosa = new String[5];
+    public static List<String> Diagnosa = new ArrayList();
     private int i= 0;
     public PasienInap(Pasien p, Dokter d) {
         setPasien(p);
@@ -27,33 +29,13 @@ public class PasienInap {
         this.dokter = d;
     }
     public void addDiagnosa (String diagnosa){
-        if(i<5){
-            this.Diagnosa[i]=diagnosa;
-            i++;
-	}
+        Diagnosa.add(diagnosa);
     }
-    public String getDiagnosa(int index){
-        return Diagnosa[index];
+    public String getDiagnosa(int a){
+        return Diagnosa.get(a);
     }
     public void DeleteDiagnosa(int a) {
-        Diagnosa[a] = null;
-            while(a<(5-a)){
-               Diagnosa[a] = Diagnosa[a+1];
-               a++;
-            }
-            if((5-a)<a && a!=4) {
-               if(Diagnosa[a+1] != null ) {
-               Diagnosa[a] = Diagnosa[a+1];
-               Diagnosa[a+1] = null;
-               a++;
-               } else {
-               Diagnosa[a] = null;
-               a++;
-               }  
-            } else {
-                Diagnosa[a] = null; 
-            }
-        i--;
+        Diagnosa.remove(a);
     }
     public Pasien getPasien(){
         return pasien;

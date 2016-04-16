@@ -38,6 +38,9 @@ public class controllerCariPasien implements ActionListener{
                 JOptionPane.showMessageDialog(null, "Pasien TIdak Ditemukan");
             }
             cp.getViewdata().setText(mod.getPasien(cari).View());
+        }else if(x.equals(cp.getBackbtn())){
+            controllerHapusPasien hp = new controllerHapusPasien(mod);
+            cp.dispose();
         }
     }
     
