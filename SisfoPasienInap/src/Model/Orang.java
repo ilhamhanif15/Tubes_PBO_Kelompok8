@@ -5,7 +5,7 @@
  */
 package Model;
 
-import sisfopasieninap.*;
+
 import java.util.Date;
 
 /**

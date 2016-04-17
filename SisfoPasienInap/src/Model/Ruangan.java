@@ -9,11 +9,10 @@ package Model;
  *
  * @author A45LB8.1
  */
-import sisfopasieninap.*;
 import java.util.*;
 public class Ruangan {
     //private PasienInap[] daftarPasien = new PasienInap[5];
-    public static List<PasienInap> daftarPasien = new ArrayList();
+    public static List<PasienInap> daftarPasienInap = new ArrayList();
     private String kodeRuang;
     private String nama;
     private int i = 0;
@@ -26,7 +25,7 @@ public class Ruangan {
         this.nama = nama;
     }
     public void tambahPasienInap(Pasien p, Dokter d){
-        daftarPasien.add(new PasienInap(p,d));
+        daftarPasienInap.add(new PasienInap(p,d));
     }
     
     public void setKodeRuang(String kodeRuang){
@@ -38,34 +37,34 @@ public class Ruangan {
     }
     
     public PasienInap GetPasienInap(int index) {
-        return daftarPasien.get(index);
+        return daftarPasienInap.get(index);
     }
     
     public PasienInap GetPasienInap(String IdPasien){
         int i=0;
-        for (Object obj : daftarPasien) {
-            if (IdPasien.equalsIgnoreCase(daftarPasien.get(i).getPasien().getId())) {
+        for (Object obj : daftarPasienInap) {
+            if (IdPasien.equalsIgnoreCase(daftarPasienInap.get(i).getPasien().getId())) {
                 break;
             } else {
                 i++;
             }    
         }
-        return daftarPasien.get(i);
+        return daftarPasienInap.get(i);
     }
     public void RemovePasienInap(int a) {
-        daftarPasien.remove(a);
+        daftarPasienInap.remove(a);
     }
     
     public void RemovePasienInap(String IdPasien) {
         int a=0;
-        for (Object obj : daftarPasien) {
-            if (IdPasien.equalsIgnoreCase(daftarPasien.get(a).getPasien().getId())) {
+        for (Object obj : daftarPasienInap) {
+            if (IdPasien.equalsIgnoreCase(daftarPasienInap.get(a).getPasien().getId())) {
                 break;
             } else {
                 a++;
             }    
         }
-        daftarPasien.remove(a);
+        daftarPasienInap.remove(a);
     }
     
     public String View(){

@@ -135,8 +135,8 @@ public class ControllerTambahPasienInap implements ActionListener {
             String idp = tpi.getTxtidpasien().getText();
             String idd = tpi.getTxtiddokter().getText();
             String idr = tpi.getTxtruang().getText();
-            try {
-            model.getRuangan(idr).tambahPasienInap(model.getPasien(idp), model.getDokter(idr));
+            
+            model.getRuangan(idr).tambahPasienInap(model.getPasien(idp), model.getDokter(idd));
             switch(n){
                 case 1:
                     model.getRuangan(idr).GetPasienInap(idp).addDiagnosa(tpi.getTxt1().getText());
@@ -160,13 +160,11 @@ public class ControllerTambahPasienInap implements ActionListener {
                     model.getRuangan(idr).GetPasienInap(idp).addDiagnosa(tpi.getTxt5().getText());
                 }
             JOptionPane.showMessageDialog(null, "Berhasil Menambahkan");
-            } catch (Exception e){
-                JOptionPane.showMessageDialog(null, "ID Pasien/Dokter/Kode Ruang Salah");
-            }
+            
     
         }else if(x.equals(tpi.getBtnBack())){
             ControllerMenuInap mi = new ControllerMenuInap(model);
             tpi.dispose();
         }
     }
-}    
+}   
