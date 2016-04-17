@@ -9,6 +9,7 @@ package Model;
  *
  * @author A45LB8.1
  */
+import static Model.PasienInap.Diagnosa;
 import java.util.*;
 public class Ruangan {
     //private PasienInap[] daftarPasien = new PasienInap[5];
@@ -71,4 +72,11 @@ public class Ruangan {
         return "Nama Ruangan : "+nama
                 +"\nKode Ruangan : "+kodeRuang;
     }
+    
+    
+    public String ViewInap(String idp, String idd){
+        return "Nama Pasien : "+GetPasienInap(idp).getPasien().getNama()
+              +"\nNama Dokter Yang Menangani : "+GetPasienInap(idp).getDokter().getNama()
+              +"\nNama Ruangan : "+nama;
+        }  
 }

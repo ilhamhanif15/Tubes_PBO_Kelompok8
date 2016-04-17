@@ -22,6 +22,7 @@ public class ControllerHapusDokter implements ActionListener {
      public ControllerHapusDokter(model model) {
         hp = new Hapus_Dokter();
         hp.setVisible(true);
+        hp.getHapus().setVisible(false);
         this.model = model;
         hp.getCari().addActionListener(this);
         hp.getHapus().addActionListener(this);
@@ -31,7 +32,6 @@ public class ControllerHapusDokter implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         Object x = e.getSource();
-        hp.getHapus().setVisible(false);
         if (x.equals(hp.getCari())) {
             String cari = hp.getId().getText();
             try {
@@ -41,20 +41,17 @@ public class ControllerHapusDokter implements ActionListener {
                                        "\nJenis Dokter  : " +model.getDokter(cari).getJenisDokter());
                 hp.getHapus().setVisible(true);
               
-            } catch (Exception f) {
+            } catch (Exception g) {
                 JOptionPane.showMessageDialog(null, "Id Dokter Tidak Ditemukan");    
             }
         } else if (x.equals(hp.getKembali())) {
-            ControllerCariDokter cd = new ControllerCariDokter(model);
+            ControllerMenuDokter cd = new ControllerMenuDokter(model);
             hp.dispose();
-        }  else if (x.equals(hp.getHapus())) {
-                try {
+        } else if (x.equals(hp.getHapus())) {
+
                     String cari = hp.getId().getText();
                     model.deleteDokter(cari);
                     JOptionPane.showMessageDialog(null, "Dokter Berhasil Dihapus"); 
-                } catch (Exception g) {
-                  JOptionPane.showMessageDialog(null, "Error");   
-                }
              }
         else if(x.equals(hp.getKembali())) {
             ControllerMenuDokter md = new ControllerMenuDokter(model);

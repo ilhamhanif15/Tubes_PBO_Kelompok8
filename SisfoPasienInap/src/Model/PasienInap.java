@@ -43,4 +43,7 @@ public class PasienInap {
     public Dokter getDokter(){
         return dokter;
     }
+
+    
+    
 }

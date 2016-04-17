@@ -66,7 +66,6 @@ public class ControllerTambahPasienInap implements ActionListener {
             tpi.getLab3().setVisible(false);
             tpi.getLab4().setVisible(false);
             tpi.getLab5().setVisible(false);
-            String d1 = tpi.getTxt1().getText();
             n=1;
         }else if (tpi.getJumdiagnosa().getSelectedItem()=="2"){
             tpi.getTxt1().setVisible(true);
@@ -79,8 +78,6 @@ public class ControllerTambahPasienInap implements ActionListener {
             tpi.getLab3().setVisible(false);
             tpi.getLab4().setVisible(false);
             tpi.getLab5().setVisible(false);
-            String d1 = tpi.getTxt1().getText();
-            String d2 = tpi.getTxt2().getText();
             n=2;
         }else if (tpi.getJumdiagnosa().getSelectedItem()=="3"){
             tpi.getTxt1().setVisible(true);
@@ -93,9 +90,6 @@ public class ControllerTambahPasienInap implements ActionListener {
             tpi.getTxt5().setVisible(false);
             tpi.getLab4().setVisible(false);
             tpi.getLab5().setVisible(false);
-            String d1 = tpi.getTxt1().getText();
-            String d2 = tpi.getTxt2().getText();
-            String d3 = tpi.getTxt3().getText();
             n=3;
         }else if (tpi.getJumdiagnosa().getSelectedItem()=="4"){
             tpi.getTxt1().setVisible(true);
@@ -108,10 +102,6 @@ public class ControllerTambahPasienInap implements ActionListener {
             tpi.getLab4().setVisible(true);
             tpi.getTxt5().setVisible(false);
             tpi.getLab5().setVisible(false);
-            String d1 = tpi.getTxt1().getText();
-            String d2 = tpi.getTxt2().getText();
-            String d3 = tpi.getTxt3().getText();
-            String d4 = tpi.getTxt4().getText();
             n=4;
         }else if (tpi.getJumdiagnosa().getSelectedItem()=="5"){
             tpi.getTxt1().setVisible(true);
@@ -124,11 +114,6 @@ public class ControllerTambahPasienInap implements ActionListener {
             tpi.getLab4().setVisible(true);
             tpi.getTxt5().setVisible(true);
             tpi.getLab5().setVisible(true);
-            String d1 = tpi.getTxt1().getText();
-            String d2 = tpi.getTxt2().getText();
-            String d3 = tpi.getTxt3().getText();
-            String d4 = tpi.getTxt4().getText();
-            String d5 = tpi.getTxt5().getText();
             n=5;
         }
         if (x.equals(tpi.getBtnAdd())){

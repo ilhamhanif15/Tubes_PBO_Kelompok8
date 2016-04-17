@@ -8,6 +8,7 @@ package Controller;
 import static Model.PasienInap.Diagnosa;
 import Model.model;
 import View.Cari_PasienInap;
+import java.awt.Component;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JOptionPane;
@@ -27,6 +28,7 @@ public class ControllerCariPasienInap implements ActionListener{
         cpi.getBtncari().addActionListener(this);
         cpi.getBtnkembali().addActionListener(this);
     }
+    
 
     @Override
     public void actionPerformed(ActionEvent ae) {
@@ -35,15 +37,13 @@ public class ControllerCariPasienInap implements ActionListener{
             String idp = cpi.getTxtid().getText();
             String idr = cpi.getTxtruang().getText();
             try {
-                System.out.println("Nama Pasien : "+mod.getRuangan(idr).GetPasienInap(idp).getPasien().getNama()
+                cpi.getTxtarea().setText("Nama Pasien : "+mod.getRuangan(idr).GetPasienInap(idp).getPasien().getNama()
                                    +"\nNama Dokter Yang Menangani : "+mod.getRuangan(idr).GetPasienInap(idp).getDokter().getNama()
                                    +"\nNama Ruangan : "+mod.getRuangan(idr).getNama());
-            int n=0;
-            for(Object obj: Diagnosa){
-                while(Diagnosa != null){
-                    System.out.println("Diagnosa Ke-"+(n+1)+". "+Diagnosa);
+                for(Object obj: Diagnosa){
+                    cpi.getTxtarea2().append((String) obj);
                 }
-            }
+            
             } catch (Exception e) {
                 JOptionPane.showMessageDialog(null, "ID Pasien/Kode Ruang TIdak ditemukan");
             }

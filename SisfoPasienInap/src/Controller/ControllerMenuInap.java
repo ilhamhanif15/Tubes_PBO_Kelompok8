@@ -57,6 +57,7 @@ public class ControllerMenuInap implements ActionListener{
         }
         else if (x.equals(mr.getBtncaripasien())) {
             ControllerCariPasienInap cp = new ControllerCariPasienInap(mod);
+            mr.dispose();
         }
     }
     

@@ -27,12 +27,12 @@ public class ControllerHapusRuangan implements ActionListener {
         hr.getCari().addActionListener(this);
         hr.getHapus().addActionListener(this);
         hr.getKembali().addActionListener(this);  
+        hr.getHapus().setVisible(false);
      }
 
     @Override
     public void actionPerformed(ActionEvent e) {
         Object x = e.getSource();
-        hr.getHapus().setVisible(false);
         if (x.equals(hr.getCari())) {
             String cari = hr.getKode().getText();
             try {
@@ -45,13 +45,10 @@ public class ControllerHapusRuangan implements ActionListener {
             } catch (Exception f) {
                 JOptionPane.showMessageDialog(null, "Kode Ruangan Tidak Ditemukan");    
             }
-        } else if (x.equals(hr.getKembali())) {
-            ControllerCariDokter cd = new ControllerCariDokter(model);
-            hr.dispose();
         }  else if (x.equals(hr.getHapus())) {
                 try {
                     String cari = hr.getKode().getText();
-                    model.deleteDokter(cari);
+                    model.deleteRuangan(cari);
                     JOptionPane.showMessageDialog(null, "Ruangan Berhasil Dihapus"); 
                 } catch (Exception g) {
                   JOptionPane.showMessageDialog(null, "Error");   

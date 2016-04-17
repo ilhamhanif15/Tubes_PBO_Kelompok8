@@ -89,7 +89,7 @@ public class model {
                 a++;
             }
         }
-        daftarPasien.remove(a);
+        daftarDokter.remove(a);
     }
     
     public Ruangan getRuangan(String KodeRuang) { 
